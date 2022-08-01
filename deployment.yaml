@@ -15,24 +15,5 @@ template:
   spec:
     containers:
     - name: hello
-      image: DOCKER-HUB-USERNAME/hello:latest
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 5000
-        name: hello
+      image: hello:latest
 
----
-apiVersion: v1
-kind: Service
-metadata:
-name: hello
-labels:
-  app: hello
-spec:
-ports:
-  - port: 5000
-    targetPort: 5000
-selector:
-  app: hello
-  tier: hello
-type: LoadBalancer
