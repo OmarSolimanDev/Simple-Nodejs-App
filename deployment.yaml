@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello
-  namespace: master 
+  namespace: dev 
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,7 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: hello
+      - name: node-container
         image: omarkamal1/nodeapp:1.0
         ports:
          - containerPort: 3000
