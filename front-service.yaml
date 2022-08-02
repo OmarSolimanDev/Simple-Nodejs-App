@@ -3,7 +3,9 @@ kind: Service
 metadata:
   name: myapp
   namespace: dev 
+
 spec:
+  type: LoadBalancer
   selector:
     app: myapp
   ports:
