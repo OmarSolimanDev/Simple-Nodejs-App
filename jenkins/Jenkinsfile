@@ -37,15 +37,7 @@ spec:
 
     
     stages {
-        stage('getting the nodejs code') {
-            steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/OmarSolimanDev/Simple-Nodejs-App.git'
-              
-                sh 'ls'
-            }
-        }
-        stage('Build-Docker-Image') {
+        stage('Building-Docker-Image') {
             steps {
                 container('docker') {
                   sh 'pwd' 
